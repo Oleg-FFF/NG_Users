@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NG Routes</title>
+</head>
+<body>
+<h1>Hello {{msg}}!</h1>
+<app-user *ngFor="let u of users" [user]="u"></app-user>
+<app-post *ngFor="let p of posts" [post]="p"></app-post>
+<app-todo *ngFor="let t of todos" [todo]="t"></app-todo>
+<app-header></app-header>
+<router-outlet></router-outlet>
+</body>
+</html>
