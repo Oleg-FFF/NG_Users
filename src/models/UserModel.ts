@@ -1,8 +1,11 @@
 export class UserModel {
   email: string;
   id: number;
-  name: string;
+  first_name: string;
+  last_name: string;
+  href: string;
   phone: string;
-  username: string;
   website: string;
+  _links: object;
+  avatar: object;
 }

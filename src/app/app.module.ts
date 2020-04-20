@@ -11,6 +11,7 @@ import { HelloComponent } from './hello/hello.component';
 import { AllUsersComponent } from './all-users/all-users.component';
 import { HeaderComponent } from './header/header.component';
 import {UserResolverService} from './services/user-resolver.service';
+import { CommentComponent } from './comment/comment.component';
 
 const routes: Routes = [
   {path: 'users', component: AllUsersComponent, resolve: {allUsers: UserResolverService}},
@@ -20,12 +21,13 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    UserComponent,
-    PostComponent,
-    TodoComponent,
+    // UserComponent,
+    // PostComponent,
+    // TodoComponent,
     HelloComponent,
     AllUsersComponent,
-    HeaderComponent
+    HeaderComponent,
+    CommentComponent
   ],
   imports: [
     BrowserModule,
