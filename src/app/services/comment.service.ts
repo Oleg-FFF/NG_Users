@@ -12,10 +12,10 @@ export class CommentService {
   }
 
   getComments(): Observable<CommentModel[]>{
-    return this.http.get<CommentModel[]>('https://gorest.co.in/public-api/cooments?access-token=1pUcQ94pe2v6CM5CFAivo49bxUaS90BiOQ1C');
+    return this.http.get<CommentModel[]>('https://jsonplaceholder.typicode.com/comments');
   }
 
-  getComment(id: number): Observable<CommentModel[]> {
-    return this.http.get<CommentModel[]>(`https://gorest.co.in/public-api/comments/${id}?access-token=1pUcQ94pe2v6CM5CFAivo49bxUaS90BiOQ1C`);
+  getCommentNyPostId(id: number): Observable<CommentModel[]> {
+    return this.http.get<CommentModel[]>(`https://jsonplaceholder.typicode.com/comments?postId=${id}`);
   }
 }

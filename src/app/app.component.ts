@@ -15,11 +15,11 @@ import {TodoService} from './services/todo.service';
 export class AppComponent implements OnInit {
   title = 'my-dream-app';
   msg: string;
-    constructor(private userService: UserService ) {
+    constructor() {
 
     this.msg = 'user';
   }
 ngOnInit(): void {
-      this.userService.getUsers().subscribe(value => console.log(value));
+
 }
 }

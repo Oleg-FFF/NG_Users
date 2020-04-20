@@ -1,1 +1,7 @@
-<p>all-comments works!</p>
+<div *ngFor="let comment of comments" class="posts">
+  {{comment.id}}
+  {{comment.postId}}
+  {{comment.email}}
+  {{comment.body}}
+  <button>show detail</button>
+</div>

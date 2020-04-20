@@ -11,10 +11,10 @@ export class PostService {
   constructor(private http: HttpClient) {
   }
   getPosts(): Observable<PostModel[]>{
-    return this.http.get<PostModel[]>('https://gorest.co.in/public-api/posts?access-token=1pUcQ94pe2v6CM5CFAivo49bxUaS90BiOQ1C');
+    return this.http.get<PostModel[]>('https://jsonplaceholder.typicode.com/posts');
   }
 
-  getPost(id: number): Observable<PostModel[]>{
-    return this.http.get<PostModel[]>(`https://gorest.co.in/public-api/posts/${id}?access-token=1pUcQ94pe2v6CM5CFAivo49bxUaS90BiOQ1C`);
+  getPostsByUserId(id: number): Observable<PostModel[]>{
+    return this.http.get<PostModel[]>(`https://jsonplaceholder.typicode.com/posts?userId=${id}`);
   }
 }

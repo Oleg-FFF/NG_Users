@@ -5,20 +5,24 @@ import { AppComponent } from './app.component';
 import {HttpClientModule} from '@angular/common/http';
 import { UserComponent } from './user/user.component';
 import { PostComponent } from './post/post.component';
-import { TodoComponent } from './todo/todo.component';
 import {RouterModule, Routes} from '@angular/router';
 import { HelloComponent } from './hello/hello.component';
 import { AllUsersComponent } from './all-users/all-users.component';
 import { HeaderComponent } from './header/header.component';
 import {UserResolverService} from './services/user-resolver.service';
 import { CommentComponent } from './comment/comment.component';
-import { AllPostsComponent } from './all-users/all-posts/all-posts.component';
+import { AllPostsComponent } from './all-posts/all-posts.component';
 import { AllCommentsComponent } from './all-comments/all-comments.component';
+import {PostResolverService} from './services/post-resolver.service';
+import {CommentResolverService} from './services/comment-resolver.service';
 
 const routes: Routes = [
   {path: 'users', component: AllUsersComponent, resolve: {allUsers: UserResolverService}},
-  {path: 'hello', component: HelloComponent}
-]
+  {path: 'posts', component: AllPostsComponent, resolve: {allPosts: PostResolverService}},
+  {path: 'comments', component: AllCommentsComponent, resolve: {allComments: CommentResolverService}},
+  {path: 'hello', component: HelloComponent},
+  {path: 'home', component: AppComponent}
+];
 
 @NgModule({
   declarations: [
