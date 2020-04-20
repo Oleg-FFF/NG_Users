@@ -12,6 +12,8 @@ import { AllUsersComponent } from './all-users/all-users.component';
 import { HeaderComponent } from './header/header.component';
 import {UserResolverService} from './services/user-resolver.service';
 import { CommentComponent } from './comment/comment.component';
+import { AllPostsComponent } from './all-users/all-posts/all-posts.component';
+import { AllCommentsComponent } from './all-comments/all-comments.component';
 
 const routes: Routes = [
   {path: 'users', component: AllUsersComponent, resolve: {allUsers: UserResolverService}},
@@ -27,7 +29,9 @@ const routes: Routes = [
     HelloComponent,
     AllUsersComponent,
     HeaderComponent,
-    CommentComponent
+    CommentComponent,
+    AllPostsComponent,
+    AllCommentsComponent
   ],
   imports: [
     BrowserModule,
